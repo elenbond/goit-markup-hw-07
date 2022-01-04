@@ -263,16 +263,22 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
-  
+  transition-property: border-color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-timing-function)
 }
 .modal__icon--close {
   transition-property: fill;
   transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-timing-function)
+  transition-timing-function: var(--animation-timing-function);
 }
 .modal__closing:hover .modal__icon--close,
 .modal__closing:focus .modal__icon--close {
   fill: var(--accent-color);
+}
+.modal__closing:hover,
+.modal__closing:focus {
+  border-color: var(--accent-color);
 }
 .modal__title {
   font-weight: 700;
@@ -302,13 +308,12 @@ body {
 }
 .modal__fill {
   position: relative;
+  margin-top: 4px;
   color: var(--title-text-color);
 }
 .modal__input {
   width: 448px;
   height: 40px;
-  margin-top: 4px;
-  
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -326,9 +331,9 @@ body {
 }
 .modal__icon {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 12px;
-  transform: translateY(-60%);
+  transform: translateY(-50%);
   width: 18px;
   height: 18px;
   transition-property: fill;
@@ -338,6 +343,7 @@ body {
 .modal__input--coment {
   width: 448px;
   height: 120px;
+  margin-top: 4px;
   padding: 12px 16px;
   resize: none;
 }
@@ -345,9 +351,6 @@ body {
 .modal__input:focus + .modal__icon { 
   fill: var(--accent-color);
 }
-/* .modal-fill:focus-within > .modal__icon {
-  fill: var(--accent-color);
-} */
 .modal__input:hover,
 .modal__input:focus {
   border-color: var(--accent-color);
@@ -381,10 +384,14 @@ body {
   background-color: #ffffff;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
-  transition-property: fill;
+  transition-property: fill, border-color, background-color;
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-timing-function)
 } 
+.terms__icon--check:hover,
+.terms__checkbox:focus:not(:checked) + .terms__icon--check {
+  border-color: var(--accent-color);
+}
 .terms__checkbox:checked + .terms__icon--check {
   fill: var(--background-color);
   background-color: var(--accent-color);
@@ -556,7 +563,6 @@ body {
 
 .sites {
   display: flex;
-  justify-content: space-between;
   margin-top: 16px;
 }
 .site__item {
@@ -794,33 +800,22 @@ body {
 /* Контейнер для адреса */
 .page-footer .pf-cont {
   display: flex;
-  align-content: center;
-  flex-direction: flex-start;
-  display: flex;
   flex-direction: column;
   align-content: flex-start;
-  width: 231px;
   margin-left: 0;
-  margin-right: 70px;
+  margin-right: auto;
   padding: 0;
 }
 /* Контейнер для ссылок */
 .container.networks {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  width: 206px;
   margin: 0;
-  margin-right: 93px;
+  margin-right: auto;
   padding: 0;
 }
 /* Контейнер для подписки */
 .container.follow {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: start;
-  width: 570px;
   padding: 0;
 }
 /* Footer follow input */
