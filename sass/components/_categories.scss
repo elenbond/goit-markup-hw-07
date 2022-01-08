@@ -42,8 +42,8 @@
     flex-direction: column;
     justify-content: flex-start;
     transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: getAnimation('duration');
+    transition-timing-function: getAnimation('timing-function');
 
     &:hover,
     &:focus {
@@ -69,8 +69,8 @@
         background: rgba(33, 150, 243, 0.902);
         transition-property: transform, opacity;
         transform: translatey(100%);
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: getAnimation('duration');
+        transition-timing-function: getAnimation('timing-function');
         opacity: 0;
     }
     .categories__link:hover &::before,
@@ -91,8 +91,8 @@
     color: getColor('second-text');
     transition-property: transform, opacity;
     transform: translatey(100%);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: getAnimation('duration');
+    transition-timing-function: getAnimation('timing-function');
     opacity: 0;
 
     .categories__link:hover &,

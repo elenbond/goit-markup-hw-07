@@ -24,8 +24,8 @@
     box-sizing: border-box;
     border-radius: 4px;
     transition-property: color, border-color;
-    transition-duration: var(--animation-duration);
-    transition-timing-function: var(--animation-timing-function);
+    transition-duration: getAnimation('duration');
+    transition-timing-function: getAnimation('timing-function');
 
     &:hover,
     &:focus {

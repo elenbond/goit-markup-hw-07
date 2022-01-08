@@ -57,8 +57,8 @@
     box-sizing: border-box; 
     border-radius: 50%;
     transition-property: color, background-color;
-    transition-duration: var(--animation-duration);
-    transition-timing-function: var(--animation-timing-function);
+    transition-duration: getAnimation('duration');
+    transition-timing-function: getAnimation('timing-function');
 
     &:hover,
     &:focus  {
@@ -69,5 +69,3 @@
 .site__icon {
     fill: currentColor;
 }
-
-  

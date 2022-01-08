@@ -1,5 +1,5 @@
 @import 'utils/variables';
-@import 'utils/zero';
+@import 'utils/reset';
 @import 'components/container';
 @import 'components/page-header';
 @import 'components/logo';
@@ -7,8 +7,6 @@
 @import 'components/contacts';
 @import 'components/section';
 @import 'components/hero';
-@import 'components/backdrop';
-@import 'components/modal';
 @import 'components/features';
 @import 'components/photos';
 @import 'components/team';
@@ -18,6 +16,8 @@
 @import 'components/page-footer';
 @import 'components/follow';
 @import 'components/ftr-networks';
+@import 'components/backdrop';
+@import 'components/modal';
 
 body {
     background-color: getColor('background');

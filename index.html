@@ -56,7 +56,7 @@
       <section class="section hero">
         <div class="container hr-container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="button button--active hero__button--active" data-modal-open>
+          <button type="button" class="button button--active button__hero--active" data-modal-open>
             Заказать услугу
           </button>
           <div class="backdrop is-hidden" data-modal>
@@ -68,31 +68,31 @@
               </button>
               <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
               <form name="signup_form" autocomplete="on" novalidate class="modal__form">
-                <label type="text" class="modal__label">Имя
+                <label for="user-name" class="modal__label">Имя
                   <div class="modal__fill">
-                    <input type="text" name="user-name" class="modal__input"/>
+                    <input type="text" name="user-name" id="user-name" class="modal__input"/>
                     <svg class="modal__icon" width="12" height="12">
                       <use href="./images/icons.svg#icon-person-black"></use>
                     </svg>
                   </div>
                 </label>
-                <label type="text" class="modal__label">Телефон
+                <label for="tel" class="modal__label">Телефон
                   <div class="modal__fill">
-                    <input type="tel" name="tel" class="modal__input"/>
+                    <input type="tel" name="tel" id="tel" class="modal__input"/>
                     <svg class="modal__icon" width="12" height="12">
                       <use href="./images/icons.svg#icon-phone-black"></use>
                     </svg>
                   </div>
                 </label>
-                <label type="text" type="text" class="modal__label">Почта
+                <label for="email" class="modal__label">Почта
                   <div class="modal__fill">
-                    <input type="email" name="email" class="modal__input"/>
+                    <input type="email" name="email" id="email" class="modal__input"/>
                     <svg class="modal__icon" width="16" height="15">
                       <use href="./images/icons.svg#icon-email-black"></use>
                     </svg>
                   </div>
                 </label>
-                <label type="text" class="modal__label">Комментарий
+                <label class="modal__label">Комментарий
                   <textarea name="comment" rows="10" placeholder="Введите текст" class="modal__input modal__input--coment"></textarea>
                 </label>
                 <div class="terms">
@@ -104,7 +104,7 @@
                     Соглашаюсь с рассылкой и принимаю <a href="#" class="terms__link">Условия договора</a> 
                   </label>
                 </div>
-                <button type="submit" class="button button--active follow__button">Отправить</button>
+                <button type="submit" class="button button--active follow__button button__modal">Отправить</button>
               </form>
             </div>
           </div>
@@ -421,10 +421,10 @@
     </main>
     <!--Footer-->
     <footer class="page-footer">
-      <div class="container ftr">
-        <div class="container pf-cont">
-          <a href="./index.html" class="logo page-footer__logo">
-            Web<span class="logo__text page-footer__text">Studio</span>
+      <div class="container container__footer">
+        <div class="contact-info">
+          <a href="./index.html" class="logo logo--page-footer">
+            Web<span class="logo__text logo__text--page-footer">Studio</span>
           </a>
           <address class="address">
             <a
@@ -447,7 +447,7 @@
           </address>
         </div>
        
-        <div class="container networks">
+        <div class="networks">
           <p class="ftr__title">Присоединяйтесь</p>
           <ul class="sites">
             <li class="site__item ftr--site__item">
@@ -480,11 +480,11 @@
             </li>
           </ul>
         </div>
-        <div class="container follow">
+        <div class="follow">
           <p class="ftr__title">Подпишитесь на рассылку</p>
           <div class="follow__thumb">
             <input type="email" name="email" class="follow__email" placeholder="E-mail"/>
-            <button type="submit" class="button button--active follow__button">Подписаться
+            <button type="submit" class="button button--active button__follow">Подписаться
               <svg class="site__icon follow--site__icon" height="24" width="24">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>

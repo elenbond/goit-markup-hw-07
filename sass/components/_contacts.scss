@@ -21,8 +21,8 @@
     display: flex;
     align-items: center;
     transition-property: color;
-    transition-duration: getColor('duration');
-    transition-timing-function: getColor('timing-function');
+    transition-duration: getAnimation('duration');
+    transition-timing-function: getAnimation('timing-function');
 
     &:hover,
     &:focus {

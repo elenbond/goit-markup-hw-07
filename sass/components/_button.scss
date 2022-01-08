@@ -12,8 +12,8 @@
     padding: 6px 22px;
     margin: auto;
     transition-property: color, background-color, box-shadow;
-    transition-duration: var(--animation-duration);
-    transition-timing-function: var(--animation-timing-function);
+    transition-duration: getAnimation('duration');
+    transition-timing-function: getAnimation('timing-function');
 
     &--active {
         background-color: getColor('accent');
@@ -45,16 +45,37 @@
     }
 }
 
-.hero__button--active {
+.button__hero--active {
     display: block;
     padding: 10px 32px;
     margin: auto;
     transition-property: box-shadow;
-    transition-duration: var(--animation-duration);
-    transition-timing-function: var(--animation-timing-function);
+    transition-duration: getAnimation('duration');
+    transition-timing-function: getAnimation('timing-function');
 
     &:hover,
     &:focus {
         box-shadow: getColor('button-shadow');
+    }
+}
+.button__follow {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+    margin-left: 12px;
+}
+.button__modal {
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: getColor('button-shadow');
+
+    &:hover,
+    &:focus {
+        background: #188CE8;
     }
 }

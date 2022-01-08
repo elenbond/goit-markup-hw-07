@@ -2,19 +2,7 @@
   background-color: getColor('hero-background');
   padding-top: 60px;
   padding-bottom: 60px;
-
-  &__logo {
-    font-family: "Raleway";
-    font-size: 26px;
-    line-height: 1.19;
-    text-decoration: none;
-    color: getColor('accent');
-    margin-bottom: 20px;
-    padding: 0;
-  }
-  &__text {
-    color: getColor('second-text');
-  }
+  
   &__contacts {
     display: inline-block;
   }
@@ -35,8 +23,8 @@
   line-height: 1.71;
   text-decoration: none;
   transition-property: color;
-  transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-timing-function);
+  transition-duration: getAnimation('duration');
+  transition-timing-function: getAnimation('timing-function');
     
   &:hover,
   &:focus {
@@ -55,8 +43,8 @@
   text-decoration: none;
   margin-bottom: 9px;
   transition-property: color;
-  transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-timing-function);
+  transition-duration: getAnimation('duration');
+  transition-timing-function: getAnimation('timing-function');
 
   &:hover,
   &:focus {

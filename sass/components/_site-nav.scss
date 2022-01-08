@@ -28,8 +28,8 @@
     padding-top: 32px;
     padding-bottom: 32px;
     transition-property: color;
-    transition-duration: getColor('duration');
-    transition-timing-function: getColor('timing-function');
+    transition-duration: getAnimation('duration');
+    transition-timing-function: getAnimation('timing-function');
     
     &--current, & {
         position: relative;
@@ -63,8 +63,8 @@
     &::after {
         opacity: 0;
         transition-property: opacity;
-        transition-duration: getColor('duration');
-        transition-timing-function: getColor('timing-function');
+        transition-duration: getAnimation('duration');
+        transition-timing-function: getAnimation('timing-function');
     }
     
     &:hover::after,

@@ -8,11 +8,11 @@
     z-index: 1;
     opacity: 1;
     transition-property: opacity;
-    transition-duration: var(--animation-duration);
-    transition-timing-function: var(--animation-timing-function);
+    transition-duration: getAnimation('duration');
+    transition-timing-function: getAnimation('timing-function');
 }
-.backdrop.is-hidden {
-    visibility: visible;
+.is-hidden {
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }

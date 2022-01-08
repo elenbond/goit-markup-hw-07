@@ -16,8 +16,8 @@
   color: getColor('icon-sites-ftr');
   will-change: transform;
   transition-property: background-color;
-  transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-timing-function);
+  transition-duration: getAnimation('duration');
+  transition-timing-function: getAnimation('timing-function');
 
   &:hover,
   &:focus  {
